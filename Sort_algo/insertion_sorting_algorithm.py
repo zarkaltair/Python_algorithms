@@ -1,13 +1,15 @@
-def insertion_sort(list_):
-    for x in range(len(list_)):
-        cursor = list_[x]
+# Insertion sort
+def insertion_sort(arr):
+    for x in range(len(arr)):
+        cursor = arr[x]
         pos = x
-        while pos > 0 and list_[pos - 1] > cursor:
-            list_[pos] = list_[pos - 1]
+        while pos > 0 and arr[pos - 1] > cursor:
+            arr[pos] = arr[pos - 1]
             pos = pos - 1
-        list_[pos] = cursor
-    return list_
+        arr[pos] = cursor
+    return arr
 
-arr = [15, 2, 4, 50, 32, 2, 0, 1, 4]
-sorted = insertion_sort(arr)
-print(sorted)
+sort_me = [15, 9, 1, 15, 68, 1, 22, 3, 0, 5]
+
+insertion_sort(sort_me)
+print(sort_me)
